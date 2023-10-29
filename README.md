@@ -33,12 +33,12 @@ Use the shortcode [mole-events] to show the full event list everywhere in your c
 Following basic rules are good the keep in mind when showing your events by using widgets or shortcodes:
 
 1. There are no required fields in the Events post type but you have to do at least some modifications to publish a new event.
-2. When event title is not set, Untitled Event will be shown instead.
-3. When time is not set at all or beginning time is empty, TBA will be shown instead.
-4. When it's recurring event and recurring every field is not set, every day will be shown instead.
+2. When event title is not set, _Untitled Event_ will be shown instead.
+3. When time is not set at all or beginning time is empty, _TBA_ will be shown instead.
+4. When it's recurring event and **recurring every** field is not set, every day will be shown instead.
 5. You can add as many event categories as you wish and all of them will be shown in widgets by default and all categories will be taken into account when filtering events based on the category.
 6. Optional post excerpt is shown in widgets and shortcodes under the even't meta section.
-7. Events with date or starting date filled in will be sorted in ascending order by the date information and others will be shown first by the order of created.
+7. Events with **date** or **starting date** filled in will be sorted in ascending order by the date information and others will be shown first by the order of created.
 8. Date and time format is based directly on the WordPress general settings.
 9. The price is shown when value is more than 0 and also the currency is set under the event or in default settings on the plugin settings page.
 10. The default currency can be set on the plugin settings page. However, if the currency is set under the single event the default currency will be overridden.
