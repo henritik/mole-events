@@ -1,0 +1,87 @@
+/* Single event */
+
+.entry-content .me-meta-wrap p {
+    margin-bottom: 0;
+}
+
+.me-event-meta p {
+    margin-bottom: 0;
+}
+
+.entry-content .me-meta {
+	font-weight: bold;
+}
+
+/* Widget */
+
+.me-single-widget {
+    margin-bottom: 2em;
+}
+
+h3.mole-events-widget-title {
+	font-size: 2em;	
+}
+
+.wp-widget-mole-events h3 {
+    margin-bottom: 1em;
+}
+
+.me-single-widget h4 {
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.me-img-small img {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.me-single-widget .me-meta-wrap {
+    margin-bottom: 1em;
+    font-size: 0.85em;
+}
+
+.me-single-widget .me-meta {
+    font-weight: bold;
+}
+
+.me-single-widget .me-excerpt {
+    font-size: 0.85em;
+    margin-bottom: 1em;
+}
+
+.me-single-widget .me-read-more {
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.me-single-widget {
+    margin-bottom: 1.5em;
+}
+
+/* Shortcode */
+
+.me-single-shortcode {
+	margin: 1em 0 2.5em 0;
+}
+
+.me-single-shortcode .me-img-small img {
+	margin: 0 0 1em 0;
+}
+
+.entry-content .me-shortcode-title {
+	font-size: 1.5em;
+}
+
+.single-content .entry-content .me-shortcode-title {
+	margin: 0 0 .5em 0;
+}
+
+.me-single-shortcode .me-meta-wrap {
+	margin-bottom: 1em;
+}
+
+.me-single-shortcode .me-read-more {
+	font-weight: bold;
+}
