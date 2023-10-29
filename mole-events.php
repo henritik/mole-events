@@ -4,9 +4,11 @@ Plugin Name: Mole Events
 Description: A simple and straightforward events plugin with customizable widgets and shortcodes.
 Version: 0.1.0
 Author: Henri Tikkanen
+Author URI: https://github.com/henritik/
+Requires PHP: 7.4
+Tested up to: WordPress 6.3.1
 Text Domain: mole-events
-Domain Path: /languages
-License: GPLv2
+License: License: GPLv2
 */
 
 defined( 'ABSPATH' ) or die();
