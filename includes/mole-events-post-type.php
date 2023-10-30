@@ -7,30 +7,30 @@ function mole_events_register_post_type() {
 
     add_theme_support('post-thumbnails');
 
-    $labels = array(
-		'name' 					=> __( 'Event','post type general name', 'mole-events' ),
+    	$labels = array(
+		'name' 				=> __( 'Events', 'post type general name', 'mole-events' ),
 		'singular_name' 		=> __( 'Event', 'post type singular name', 'mole-events' ),
-		'name_admin_bar'		=> __( 'Events', 'mole-events' ),
-		'add_new' 				=> __( 'New Event', 'mole-events' ),
+		'name_admin_bar'		=> __( 'Event', 'mole-events' ),
+		'add_new' 			=> __( 'New Event', 'mole-events' ),
 		'add_new_item' 			=> __( 'Add new Event', 'mole-events' ),
 		'edit_item' 			=> __( 'Edit Event', 'mole-events' ),
-		'new_item' 				=> __( 'New Event', 'mole-events' ),
+		'new_item' 			=> __( 'New Event', 'mole-events' ),
 		'view_item' 			=> __( 'View Event', 'mole-events' ),
-		'search_items' 			=> __( 'Search Events', 'mole-events' ),
-		'not_found' 			=> __( 'Events not found', 'mole-events' ),
-		'not_found_in_trash' 	=> __( 'Events not found in trash', 'mole-events' )
+        	'search_items' 			=> __( 'Search Events', 'mole-events' ),
+        	'not_found' 			=> __( 'Events not found', 'mole-events' ),
+        	'not_found_in_trash' 		=> __( 'Events not found in trash', 'mole-events' )
 	);
 
 	$args = array (
-		'labels' 				=> $labels,
+		'labels' 			=> $labels,
 		'has_archive'   		=> true,
 		'hierarchical'  		=> false,
-		'public' 				=> true,
-		'show_in_nav_menus' 	=> false,
+		'public' 			=> true,
+		'show_in_nav_menus' 		=> false,
 		'description'			=> 'Mole Events description',
 		'show_in_rest' 			=> true,
-		'rewrite' 				=> array('slug' => 'event'),
-		'supports' 				=> array (
+		'rewrite' 			=> array('slug' => 'event'),
+		'supports' 			=> array (
 			'title',
 			'editor',
 			'thumbnail',
@@ -51,7 +51,7 @@ add_action( 'init', function() {
 		'type' => 'boolean',
 	] );
 
-    register_post_meta( 'mole_event', '_me_recurring', [
+    	register_post_meta( 'mole_event', '_me_recurring', [
 		'show_in_rest' => true,
 		'single' => true,
 		'type' => 'string',
@@ -69,7 +69,7 @@ add_action( 'init', function() {
 		'type' => 'string',
 	] );
 
-    register_post_meta( 'mole_event', '_me_time_to', [
+    	register_post_meta( 'mole_event', '_me_time_to', [
 		'show_in_rest' => true,
 		'single' => true,
 		'type' => 'string',
@@ -81,13 +81,13 @@ add_action( 'init', function() {
 		'type' => 'string',
 	] );
 
-    register_post_meta( 'mole_event', '_me_price', [
+    	register_post_meta( 'mole_event', '_me_price', [
 		'show_in_rest' => true,
 		'single' => true,
 		'type' => 'number',
 	] );
 
-    register_post_meta( 'mole_event', '_me_price_currency', [
+    	register_post_meta( 'mole_event', '_me_price_currency', [
 		'show_in_rest' => true,
 		'single' => true,
 		'type' => 'string',
@@ -117,22 +117,22 @@ function current_user_can_edit_posts() {
 function mole_events_register_taxonomies() {
 
 	$labels = array(
-		'name' 			        	=> __( 'Event Categories', 'taxonomy general name', 'mole-events' ),
-		'singular_name' 		    => __( 'Event Category', 'taxonomy singular name', 'mole-events' ),
+		'name' 			       	=> __( 'Event Categories', 'taxonomy general name', 'mole-events' ),
+		'singular_name' 		=> __( 'Event Category', 'taxonomy singular name', 'mole-events' ),
 		'search_items' 		    	=> __( 'Search Event Categories', 'mole-events' ),
-		'all_items' 			    => __( 'All Event Categories', 'mole-events' ),
-		'edit_item'  			    => __( 'Edit Event Category', 'mole-events' ),
-		'update_item' 			    => __( 'Update Event Category', 'mole-events' ),
+		'all_items' 			=> __( 'All Event Categories', 'mole-events' ),
+		'edit_item'  			=> __( 'Edit Event Category', 'mole-events' ),
+		'update_item' 			=> __( 'Update Event Category', 'mole-events' ),
 		'add_new_item' 		    	=> __( 'Add New Event Category', 'mole-events' ),
-		'new_item_name' 		    => __( 'New Event Category', 'mole-events' ),
-		'popular_items' 		    => __( 'Popular Event Categories', 'mole-events' ),
-		'menu_name' 			    => __( 'Event Categories', 'mole-events' ),
+		'new_item_name' 		=> __( 'New Event Category', 'mole-events' ),
+		'popular_items' 		=> __( 'Popular Event Categories', 'mole-events' ),
+		'menu_name' 			=> __( 'Event Categories', 'mole-events' ),
 		'choose_from_most_used'  	=> __( 'Choose from the most used Event Categories', 'mole-events' ),
-		'not_found' 			    => __( 'No Event Categories found', 'mole-events' )
+		'not_found' 			=> __( 'No Event Categories found', 'mole-events' )
 	);
 
     $args = array(
-		'labels' 		        	=> $labels,
+		'labels' 		        => $labels,
 		'hierarchical'         		=> true,
 		'sort'                 		=> true,
 		'args'                 		=> array( 'orderby' => 'term_order'),
