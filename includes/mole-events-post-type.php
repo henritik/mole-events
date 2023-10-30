@@ -5,7 +5,7 @@ Register new post type: Event
 
 function mole_events_register_post_type() {
 
-    add_theme_support('post-thumbnails');
+	add_theme_support('post-thumbnails');
 
     	$labels = array(
 		'name' 				=> __( 'Events', 'post type general name', 'mole-events' ),
@@ -104,7 +104,7 @@ function enable_show_in_rest($args, $defaults, $object_type, $meta_key) {
 		($meta_key === '_me_price' && is_array($args)) || 
 		($meta_key === '_me_price_currency' && is_array($args)) ) {
 			$args['auth_callback'] = 'current_user_can_edit_posts';
-    }
+    	}
 	return $args;
 }
 add_filter('register_meta_args', 'enable_show_in_rest', 10, 4);
@@ -131,7 +131,7 @@ function mole_events_register_taxonomies() {
 		'not_found' 			=> __( 'No Event Categories found', 'mole-events' )
 	);
 
-    $args = array(
+	$args = array(
 		'labels' 		        => $labels,
 		'hierarchical'         		=> true,
 		'sort'                 		=> true,
@@ -151,8 +151,6 @@ function me_display_event_meta( $content ) {
 	if( is_admin() ) {
 		return;
 	}
-
-	global $post;
 
 	$date_format = get_option( 'date_format' );
 	$time_format = get_option( 'time_format' );
@@ -178,13 +176,11 @@ function me_display_event_meta( $content ) {
 			$event_meta  .= $time_from && $time_to ? ' - ' . '<span class="me-meta">' . $time_to . '</span></p>' : '</p>';
 			$event_meta  .= $date ? '<p>' . __( 'Starting from: ', 'mole-events' ) . '<span class="me-meta">' . $date . '</span></p>' :
 			'<p>' . __( 'Starting from: ', 'mole-events' ) . '<span class="me-meta">' . __( 'TBA', 'mole-events' ) . '</span></p>';
-
 		} else {
 			$event_meta  .= $date ? '<p><span class="me-meta">' . $date . '</span>' : '<p><span class="me-meta">' . __( 'TBA', 'mole-events' ) . '</span>';
 			$event_meta  .= $date && $time_from ? __( ' at ', 'mole-events' ) . '<span class="me-meta">' . $time_from . '</span>' : null;
 			$event_meta  .= $date && $time_from && $time_to ? ' - ' . '<span class="me-meta">' . $time_to . '</span></p>' : '</p>';
-   		}
-       	
+   		}      	
 		$event_meta .= $location ? '<p>' . __( 'Location: ', 'mole-events' ) . '<span class="me-meta">' . $location . '</span></p>' : null;
 		$event_meta .= $price > 0 && $currency > 0 ? '<p>' . __( 'Price: ', 'mole-events' ) . '<span class="me-meta">' . $price . ' ' . $currency . '</span></p>' : null;
 		$event_meta .= '</div>';
