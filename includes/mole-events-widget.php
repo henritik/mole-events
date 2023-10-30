@@ -61,8 +61,8 @@ class mole_events_Widget extends WP_Widget {
 				}
 				?>
 			</select>
-            </p>
-    		<?php
+            		</p>
+    			<?php
 	}
 
 	public function update($new_instance, $old_instance) {
@@ -92,7 +92,6 @@ class mole_events_Widget extends WP_Widget {
 		if( $title ) {
 			echo '<h3 class="mole-events-widget-title">' . $title . '</h3>';
 		}
-    
 		if( $category == 'all' ) {
 			$args = array(
 				'post_type' => 'mole_event',
@@ -157,7 +156,6 @@ class mole_events_Widget extends WP_Widget {
 						$content .= $time_from && $time_to ? ' - ' . '<span class="me-meta">' . $time_to . '</span></p>' : '</p>';
 						$content .= $date ? '<p>' . __( 'Starting from: ', 'mole-events' ) . '<span class="me-meta">' . $date . '</span></p>' :
 						'<p>' . __( 'Starting from: ', 'mole-events' ) . '<span class="me-meta">' . __( 'TBA', 'mole-events' ) . '</span></p>';
-
 					} else {
 						$content .= $date ? '<p><span class="me-meta">' . $date . '</span>' : '<p><span class="me-meta">' . __( 'TBA', 'mole-events' ) . '</span>';
 						$content .= $date && $time_from ? __( ' at ', 'mole-events' ) . '<span class="me-meta">' . $time_from . '</span>' : null;
