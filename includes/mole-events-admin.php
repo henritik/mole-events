@@ -39,7 +39,7 @@ function me_readme_section_callback() {
 	<ol>
 		<li>There are no required fields in the Events post type but you have to do at least some modifications to publish a new event.</li>
 		<li>When event title is not set, <i>Untitled Event</i> will be shown instead.
-		<li>When time is not set at all or beginning time is empty, <i>TBA</i> will be shown instead.</li>
+		<li>When time is not set at all, beginning time is empty or time is set but date is empty, <i>TBA</i> will be shown instead.</li>
 		<li>When it's recurring event and <b>recurring every</b> field is not set, <i>every day</i> will be shown instead.</li>
 		<li>You can add as many event categories as you wish and all of them will be shown in widgets by default and all categories will be taken into account when filtering events based on the category.</li>
 		<li>Optional post excerpt is shown in widgets and shortcodes under the even't meta section.</li>
@@ -69,6 +69,7 @@ function me_options_page() {
 		'manage_options',
 		'mole-events',
 		'me_options_page_html'
+		'dashicons-smiley'
 	);
 }
 add_action( 'admin_menu', 'me_options_page' );
