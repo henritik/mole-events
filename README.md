@@ -3,11 +3,12 @@
 Plugin Name: Mole Events<br>
 Description: A simple and straightforward events plugin with customizable widgets and shortcodes.<br>
 Version: 0.1.0<br>
-Requires PHP: 7.4<br>
 Author: Henri Tikkanen<br>
 Author URI: https://github.com/henritik/<br>
-License: License: GPLv2<br>
+Requires PHP: 7.4<br>
 Tested up to: WordPress 6.3.1<br>
+Text Domain: mole-events<br>
+License: License: GPLv2<br>
 <br>
 
 ### Description
@@ -34,7 +35,7 @@ Following basic rules are good the keep in mind when showing your events by usin
 
 1. There are no required fields in the Events post type but you have to do at least some modifications to publish a new event.
 2. When event title is not set, _Untitled Event_ will be shown instead.
-3. When time is not set at all or beginning time is empty, _TBA_ will be shown instead.
+3. When time is not set at all, beginning time is empty or time is set but date is empty, _TBA_ will be shown instead.
 4. When it's recurring event and **recurring every** field is not set, every day will be shown instead.
 5. You can add as many event categories as you wish and all of them will be shown in widgets by default and all categories will be taken into account when filtering events based on the category.
 6. Optional post excerpt is shown in widgets and shortcodes under the even't meta section.
@@ -43,6 +44,12 @@ Following basic rules are good the keep in mind when showing your events by usin
 9. The price is shown when value is more than 0 and also the currency is set under the event or in default settings on the plugin settings page.
 10. The default currency can be set on the plugin settings page. However, if the currency is set under the single event the default currency will be overridden.
 11. In the widgets up to 10 events are shown at once and in the shortcodes all the events are shown in the same page.
+
+### Screenshots
+- https://github.com/henritik/mole-events/blob/main/assets/screen01.png
+- https://github.com/henritik/mole-events/blob/main/assets/screen02.png
+- https://github.com/henritik/mole-events/blob/main/assets/screen03.png
+- https://github.com/henritik/mole-events/blob/main/assets/screen04.png
 
 ### Changelog
 
