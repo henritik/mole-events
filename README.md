@@ -50,6 +50,7 @@ Following basic rules are good the keep in mind when showing your events by usin
 - https://github.com/henritik/mole-events/blob/main/assets/screen02.png
 - https://github.com/henritik/mole-events/blob/main/assets/screen03.png
 - https://github.com/henritik/mole-events/blob/main/assets/screen04.png
+- https://github.com/henritik/mole-events/blob/main/assets/screen05.png
 
 ### Changelog
 
