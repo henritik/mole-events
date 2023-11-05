@@ -68,7 +68,7 @@ function me_options_page() {
 		'Mole Events',
 		'manage_options',
 		'mole-events',
-		'me_options_page_html'
+		'me_options_page_html',
 		'dashicons-smiley'
 	);
 }
