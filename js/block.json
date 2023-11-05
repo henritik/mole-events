@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "mole-event/meta-block",
+  "version": "1.0.0",
+  "title": "Post-meta Block",
+  "category": "text",
+  "icon": "smiley",
+  "description": "Post-meta block for Mole Events plugin",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "mole-event",
+  "editorScript": "file:./index.js"
+}
