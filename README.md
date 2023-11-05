@@ -2,7 +2,7 @@
 
 Plugin Name: Mole Events<br>
 Description: A simple and straightforward events plugin with customizable widgets and shortcodes.<br>
-Version: 0.1.0<br>
+Version: 0.2.0<br>
 Author: Henri Tikkanen<br>
 Author URI: https://github.com/henritik/<br>
 Requires PHP: 7.4<br>
@@ -54,6 +54,10 @@ Following basic rules are good the keep in mind when showing your events by usin
 
 ### Changelog
 
+#### 0.2.0
+- Updated JS-build
+- Minor fixes
+  
 #### 0.1.0
 - Initial release
 
