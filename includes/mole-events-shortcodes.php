@@ -22,7 +22,7 @@ function mole_events_shortcode( $atts = array() ) {
 			'posts_per_page' => -1
 		);
 	} else {
-        $args = array(
+		$args = array(
 			'post_type' => 'mole_event',
 			'mole_events_category' => $me_atts['category'],
 			'post_status' => 'publish',
@@ -39,7 +39,7 @@ function mole_events_shortcode( $atts = array() ) {
 	if( $loop->have_posts() ) {
 		while( $loop->have_posts() ) { 
 			$loop->the_post();
-             
+			 
 			$title = get_the_title();
 			$date_format = get_option('date_format');
 			$time_format = get_option( 'time_format' );
@@ -56,15 +56,15 @@ function mole_events_shortcode( $atts = array() ) {
 			$price = get_post_meta( get_the_ID(), '_me_price', true );
 			$currency = get_post_meta( get_the_ID(), '_me_price_currency', true ) ? get_post_meta( get_the_ID(), '_me_price_currency', true ) : get_option( 'me_currency' );    
 			$excerpt = get_the_excerpt();
-			$thumbnail = get_the_post_thumbnail(get_the_ID(),'large');
-			$post_category = get_the_term_list($post->ID, 'mole_events_category', '', ', ');
-                    
+			$thumbnail = get_the_post_thumbnail( get_the_ID(), 'large');
+			$post_category = get_the_term_list( get_the_ID(), 'mole_events_category', '', ', ');
+					
 			$content .= '<div class="me-single-shortcode">';
 			$content .= $thumbnail ? '<div class="me-img-small">' . $thumbnail . '</div>' : null;
 			$content .= '<h3 class="me-shortcode-title"><a href="' . $url . '">';
 			$content .= $title ? $title . '</a></h3>' : __( 'Untitled Event', 'mole-events' ) . '</a></h3>';              
 			$content .= '<div class="me-meta-wrap">';
-                        
+						
 			if( $recurring_toggle ) {
 				$content .= $recurring ? '<p>' . __( 'Every ', 'mole-events' ) . '<span class="me-meta">' . $recurring . '</span>' : 
 				'<p><span class="me-meta">' . __( 'Every day ', 'mole-events' ) . '</span>';
@@ -79,7 +79,7 @@ function mole_events_shortcode( $atts = array() ) {
 			}
 			$content .= $location ? '<p>' . __( 'Location: ', 'mole-events' ) . '<span class="me-meta">' . $location . '</span></p>' : null;
 			$content .= $price > 0 && $currency > 0 ? '<p>' . __( 'Price: ', 'mole-events' ) . '<span class="me-meta">' . $price . ' ' . $currency . '</span></p>' : null;
-			$content .= $post_category && !$hide_category ? '<p>' . __( 'Category: ', 'mole-events' ) . '<span class="me-meta">' . $post_category . '</span></p>' : null;
+			$content .= $post_category ? '<p>' . __( 'Category: ', 'mole-events' ) . '<span class="me-meta">' . $post_category . '</span></p>' : null;
 			$content .= '</div>';
 			$content .= $excerpt ? '<p class="me-excerpt">' . $excerpt . '</p>' : null;
 			$content .= '<a class="me-read-more" href="' . $url . '">' . __( 'Go to event &raquo;', 'mole-events' ) . '</a>';
